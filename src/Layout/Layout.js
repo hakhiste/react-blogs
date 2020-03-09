@@ -20,7 +20,7 @@ class Layout extends Component {
             <Route exact path='/' component={Listing} />
             <Route exact path='/about' component={About} />
             <Route exact path='/contact-us' component={ContactUs} />
-            <Route exact path='/post/:id' children={<Blog />} />
+            <Route exact path='/post/:id' component={Blog} />
           </Switch>
         </Router>
         <Footer></Footer>

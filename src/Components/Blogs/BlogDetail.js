@@ -3,6 +3,7 @@ import axios from "axios";
 import BlogSummary from "../../Containers/Blogs/BlogSummary";
 import Alert from "../../Util/Alert";
 import Loader from "../../Util/Loader";
+import { API_URL } from "../../Constants";
 
 const initState = { loading: true, posts: {} };
 class BlogDetail extends Component {
@@ -11,14 +12,14 @@ class BlogDetail extends Component {
     initState.blogLimit = props.limit ? props.limit : 5;
     this.state = initState;
   }
-
-  componentDidMount = () => {
-    this.loadBlogs();
+  
+  componentDidMount = (props) => {
+    this.loadBlogs(this.props.id);
   };
 
-  loadBlogs = () => {
+  loadBlogs = (id) => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts/1`)
+      .get(`${API_URL}posts/${id}`)
       .then(res => {
         this.setState({
           loading: false,

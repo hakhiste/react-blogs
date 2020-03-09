@@ -4,6 +4,7 @@ import BlogSummary from "../../Containers/Blogs/BlogSummary";
 import Alert from "../../Util/Alert";
 import Loader from "../../Util/Loader";
 import {Link} from 'react-router-dom';
+import {API_URL} from '../../Constants';
 
 const initState = { loading: true, posts: {} };
 class Blog extends Component {
@@ -19,7 +20,7 @@ class Blog extends Component {
 
   loadBlogs = () => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts`)
+      .get(`${API_URL}posts`)
       .then(res => {
         console.log(res);
         this.setState({
