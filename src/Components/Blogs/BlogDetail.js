@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import BlogSummary from "../../Containers/Blogs/BlogSummary";
 import Alert from "../../Util/Alert";
+import Loader from "../../Util/Loader";
 
 const initState = { loading: true, posts: {} };
 class BlogDetail extends Component {
@@ -32,7 +33,7 @@ class BlogDetail extends Component {
     return (
       <>
         {this.state.loading ? (
-          "loading..."
+          <Loader />
         ) : !this.state.result ? (
           <Alert result='error' message='Error while loading blogs...' />
         ) : Object.keys(this.state.posts).length > 0 ? (

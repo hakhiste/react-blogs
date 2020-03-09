@@ -4,14 +4,14 @@ import {Link} from 'react-router-dom';
 const BlogListing = props => {
   const item = props.item;
   return (
-    <div class='row' key={props.id}>
-      <div class='col-lg-8 col-md-10 mx-auto'>
-        <div class='post-preview'>
+    <div className='row' key={props.id}>
+      <div className='col-lg-8 col-md-10 mx-auto'>
+        <div className='post-preview'>
           <Link to={ `/post/${item.id}` }>
-            <h2 class='post-title'>{item.title}</h2>
+            <h2 className='post-title'>{item.title}</h2>
           </Link>
-          <p class='post-subtitle'>{item.body}</p>
-          <p class='post-meta'>
+          <p className='post-subtitle'>{item.body}</p>
+          <p className='post-meta'>
             Posted by
             <Link to='#'>Start Bootstrap</Link>
             on September 24, 2019

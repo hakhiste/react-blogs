@@ -9,7 +9,7 @@ const Blog = props => {
   return (
     <>
       <HeadSection />
-      <div class='container'>
+      <div className='container'>
         <BlogDetail item={item}/>
       </div>
     </>
