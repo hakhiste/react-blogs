@@ -35,13 +35,13 @@ const Header = () => {
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link to='/' className='nav-link'>
-                  Sample Post
+                <Link to='/contact-us' className='nav-link'>
+                  Contact
                 </Link>
               </li>
               <li className='nav-item'>
-                <Link to='/contact-us' className='nav-link'>
-                  Contact
+                <Link to='/login' className='nav-link'>
+                  Login / Register
                 </Link>
               </li>
             </ul>

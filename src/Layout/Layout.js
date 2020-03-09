@@ -8,6 +8,7 @@ import Listing from "../Containers/Blogs/Listings";
 import About from "../Containers/About";
 import ContactUs from "../Containers/ContactUs";
 import Blog from "../Containers/Blogs/Blog";
+import Login from "../Containers/Login";
 
 class Layout extends Component {
   render = () => {
@@ -21,6 +22,7 @@ class Layout extends Component {
             <Route exact path='/about' component={About} />
             <Route exact path='/contact-us' component={ContactUs} />
             <Route exact path='/post/:id' component={Blog} />
+            <Route exact path='/login' component={Login} />
           </Switch>
         </Router>
         <Footer></Footer>
